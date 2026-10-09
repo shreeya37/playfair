@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0b1020;
+    --card: #141b30;
+    --text: #f5f3ff;
+    --muted: #a6afca;
+    --purple: #b7a0ff;
+    --cyan: #67e8f9;
+    --border: rgba(190, 200, 255, 0.14);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0 7%;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at top left, #30245c, transparent 45%),
+        radial-gradient(ellipse at bottom right, #102b45, transparent 40%),
+        var(--bg);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--text);
+    text-decoration: none;
+    font: 700 1.6rem 'Space Grotesk', sans-serif;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-label, .eyebrow {
+    color: var(--cyan);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 0 45px;
+}
+
+.hero h1 {
+    font: 700 clamp(2.8rem, 6vw, 4.5rem) 'Space Grotesk', sans-serif;
+    letter-spacing: -2px;
+    margin: 12px 0;
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+.subtitle {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.workspace {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+}
+
+.card {
+    padding: 30px;
+    background: rgba(20, 27, 48, 0.88);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(12px);
+}
+
+.card h2 {
+    font: 600 1.5rem 'Space Grotesk', sans-serif;
+    margin: 8px 0;
+}
+
+.card-description {
+    color: var(--muted);
+    margin-bottom: 26px;
+    font-size: 0.9rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 23px;
+    border-radius: 11px;
+    border: 1px solid var(--border);
+    outline: none;
+    color: var(--text);
+    background: #0c1223;
+    font: 0.95rem 'DM Sans', sans-serif;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(183, 160, 255, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #727d9b;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 17px;
+    font: 600 0.9rem 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.encrypt-btn {
+    color: #0b1020;
+    background: linear-gradient(110deg, var(--purple), var(--cyan));
+}
+
+.decrypt-btn, .copy-btn {
+    color: var(--text);
+    background: #252d47;
+    border: 1px solid var(--border);
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-box {
+    display: flex;
+    align-items: center;
+    min-height: 170px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px dashed rgba(183, 160, 255, 0.4);
+    border-radius: 12px;
+    background: rgba(8, 13, 28, 0.6);
+    overflow-wrap: anywhere;
+}
+
+#result {
+    color: var(--cyan);
+    font: 600 1.1rem 'Space Grotesk', sans-serif;
+    letter-spacing: 1px;
+}
+
+.copy-btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 45px 0 25px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+footer span {
+    color: var(--purple);
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 0 5%;
+    }
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 50px 0 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-label {
+        font-size: 0.58rem;
+        letter-spacing: 1px;
+    }
+
+    .card {
+        padding: 21px;
+    }
+
+    .button-group button {
+        flex: 1 1 100%;
+    }
+}

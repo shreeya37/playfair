@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playfair Cipher | CipherLab</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Cipher<span>Lab.</span></a>
+        <span class="nav-label">CLASSICAL CRYPTOGRAPHY</span>
+    </nav>
+
+    <header class="hero">
+        <p class="eyebrow">THE ART OF SECRET MESSAGES</p>
+        <h1>Playfair <span>Cipher</span></h1>
+        <p class="subtitle">
+            Transform ordinary messages into secret text
+            using the classic Playfair encryption technique.
+        </p>
+    </header>
+
+    <main class="workspace">
+
+        <section class="card">
+            <h2>Message Studio</h2>
+            <p class="card-description">
+                Enter your keyword and message below.
+            </p>
+
+            <label for="keyword">Secret Keyword</label>
+            <input
+                type="text"
+                id="keyword"
+                placeholder="Enter a keyword..."
+            >
+
+            <label for="message">Your Message</label>
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Type your message here..."
+            ></textarea>
+
+            <div class="button-group">
+                <button class="encrypt-btn" id="encryptBtn">
+                    ↗ Encrypt Message
+                </button>
+                <button class="decrypt-btn" id="decryptBtn">
+                    ↙ Decrypt Message
+                </button>
+            </div>
+        </section>
+
+        <section class="card result-card">
+            <p class="eyebrow">OUTPUT</p>
+            <h2>Your Result</h2>
+            <div class="result-box">
+                <p id="result">Your result will appear here...</p>
+            </div>
+            <button class="copy-btn" id="copyBtn">
+                Copy Result
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        CipherLab <span>·</span> Explore the science of secret messages
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
